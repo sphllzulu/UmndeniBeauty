@@ -1,0 +1,82 @@
+.c-item{
+    height:600px;
+    
+}
+.c-img{
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.6);}
+
+    .c-item1{
+        height:650px;
+        
+    }
+    .c-img1{
+        height:100%;
+        object-fit:cover;
+    }
+
+#contact{
+    
+    width:100%;
+    margin:auto;
+    margin-top: 100px;
+    background: linear-gradient(114.3deg, rgb(19, 126, 57) 0.2%, rgb(8, 65, 91) 68.5%);
+}  
+#name,#email,#subject,#message{
+    background-color: transparent;
+    border:2px solid grey;
+}  
+.send{
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+/***Gallery***/
+
+.container1{
+    background-color: whitesmoke;
+    height:600px;
+    overflow: hidden;
+     position: relative;
+     width:100%;
+     display:flex;
+     align-items: center;
+     padding:0 20px; 
+  }
+  .container1::before, .container1::after{
+      content:'';
+      position:absolute;
+      height:200px;
+      width:200px;
+      z-index: 2;
+  }
+  .container1::after{
+      right:0;
+      top:0;
+      transform:rotateZ(180deg);
+  }
+  .container1::before{
+     left:0;
+     top:0; 
+  }
+  .container1 .track{
+   display:flex;
+   width:calc(200px*10);
+   animation: scroll 15s linear infinite;
+  
+  }
+  .container1 .image{
+      width:400px;
+  
+  }
+  .container1 .image img{
+      height:400px;
+  }
+  @keyframes scroll{
+      from{
+       transform:translateX(0);
+      }
+      to{
+       transform: translateX(calc(-150px * 5));
+      }
+  }
